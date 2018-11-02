@@ -38,31 +38,32 @@
     </section>
     <!-- Artikler -->    
 
+    <!-- Prosjekt modal -->
     <% @projects.each do |project| %>
     <div class="modal fade" id="project-modal-<%= project.id %>" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog custom-modal" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><%= project.title %></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
-                <div class="modal-body">
-                 
-                    <div class="service_details_content p-15">
-                       
+                <div class="modal-body">                 
+                    <div class="service_details_content p-15">                       
                         <div class="service_details_thumb">
                             <%= image_tag(project.image, :class => "", :alt => "") if project.image? %>
                         </div>
                         <div class="single_part_content m-top-30">
                         	<%= project.content.html_safe %>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <% end %>
+    <!-- Prosjekt modal -->
 
     <!-- Prosjekter -->
     <section class="about_area landing_one_version section_padding_100_70" id="projects">
@@ -136,7 +137,7 @@
     <section class="message_now_area landing_one_version section_padding_100_70" id="contact">
         <div class="container">
             <div class="row justify-content">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="message_title">
                         <div class="section_heading">
                             <h3>Ta kontakt for en uforpliktende prat</h3>
@@ -144,7 +145,7 @@
                     </div>
                 </div>
                 <% @contacts.each do |contact| %>
-                <div class="col-6 col-md-6 col-xs-12">
+                <div class="col-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="contact_from">
                     	<div class="row">
                     		<div class="col-md-4">
