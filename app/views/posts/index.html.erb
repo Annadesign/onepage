@@ -148,7 +148,7 @@
                     <div class="contact_from">
                     	<div class="row">
                     		<div class="col-md-4">
-                    			<%#= image_tag(contact.image, :class => "", :alt => "") if contact.image? %>
+                    			<%= image_tag(contact.image, :class => "img-responsive", :alt => '') if contact.image? %>
                     		</div>
                     		<div class="col-md-8">
                     			<h4><%= contact.name %></h4>
