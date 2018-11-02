@@ -110,7 +110,7 @@
                 <% @partners.each do |partner| %>
                 <div class="col-12 col-sm-6 col-md-6">
                     <div class="single_why_choose_us text-center">
-                        <%= image_tag(partner.logo, :class => "", :alt => "") if partner.logo? %>
+                        <%= image_tag(partner.logo, :class => "", :alt => "", :style => 'width:250px;') if partner.logo? %>
                         <p><%= partner.description %></p>
                         <a href="<%= partner.link %>" target="_blank" class="btn btn-outline btn-pill btn-sm btn-mat-blue"><%= partner.title %> sine nettsider</a>
                     </div>
