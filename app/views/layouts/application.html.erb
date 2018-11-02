@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Dragseth EnergiConsult</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <meta name="description" content="dragseth energiconsult, energi sparing, Enova, zaptec, det grønne skiftet, sparetiltak, energirådgivning, energimerker"> 
+    <%= stylesheet_link_tag 'front', media: 'all', 'data-turbolinks-track' => true %> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Navigasjon -->
+      <%= render 'nav' %>
+    <!-- Navigasjon -->
+    
+    <!-- Intro Dragseth EnergiConsult -->
+    <section class="landing_welcome_area height-600 landing_one_version background-overlay jarallax" style="background-image: url(<%= asset_path 'bg-index.jpg' %>);" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Welcome Text  -->
+                    <div class="landing_hero_text text-center">
+                        <h2 class="fonts-shadow-into-light">- unngå ressurser på avveie</h2>
+                        <p>Gi et bidrag til det grønne skiftet gjennom lavest mulig bruk av energi.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Intro -->
+
+  <%= yield %>
+
+    <footer class="footer_area landing_one_version">
+        <div class="footer_widget_area section_padding_100">
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-12 col-md-4">
+                        <div class="single_footer_widget text-center">
+
+                        </div>
+                    </div>                   
+                    <div class="col-12 col-md-4">
+                        <div class="single_footer_widget text-center">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            <h4>Dragseth EnergiConsult</h4>
+                            <p>Daglig leder: Erling Dragseth</p>
+                            <p>Adresse: Fuglsetvegen 6, 6415 Molde</p>
+                            <p><i class="fa fa-phone"></i> 415 52 262</p>
+                            <p><i class="fa fa-envelope"></i> erling.dragseth@sunndals.net</p>
+                            <p> <p>Org.nr. 911 634 325</p></p>                                   
+                        </div>
+                    </div>                    
+                    <div class="col-12 col-md-4">
+                        <div class="single_footer_widget text-center">
+                            <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer_bottom">
+                            <!--<p style="text-align: right;"><a href="https://www.annadesign.no">AN:NA design</a></p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <%= javascript_include_tag 'front', 'data-turbolinks-track' => true %> 
+  </body>
+</html>
