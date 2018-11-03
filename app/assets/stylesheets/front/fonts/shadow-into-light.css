@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
 .fonts-shadow-into-light {
-    font-family: 'Shadows Into Light Two', cursive !important;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
-.fonts-shadow-into-light-one {
-    font-family: 'Shadows Into Light';
-}
-
-
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
-.fonts-shadow-into-light-test {
-    font-family: 'Permanent Marker', cursive!important;
+    /*font-family: 'Shadows Into Light Two', cursive !important;*/
+    font-family: 'Shadows Into Light', cursive;
 }

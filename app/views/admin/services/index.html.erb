@@ -18,7 +18,7 @@
               <td><i class="fa fa-<%=service.icon%>"></i> <%= service.title %></td>
               <td><%= service.description.html_safe %></td>
               <td><%= link_to 'Redigere', edit_admin_service_path(service, :cat => params[:cat]), :class => 'btn btn-info btn-xs' %></td>
-              <td><%= link_to 'Slett', admin_service_path(service), :class => 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+              <td><%= link_to 'Slett', admin_service_path(service, :cat => params[:cat]), :class => 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Er du sikker?' } %></td>
             </tr>
           <% end %>
         </tbody>
@@ -26,7 +26,7 @@
 
       <br>
 
-      <%= link_to 'Ny kategori', new_admin_service_path(:cat => '2'), :class => 'btn btn-primary' %>
+      <%= link_to 'Ny tjeneste', new_admin_service_path(:cat => params[:cat]), :class => 'btn btn-primary' %>
 
     </div>
   </div>
