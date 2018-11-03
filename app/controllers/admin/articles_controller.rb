@@ -2,10 +2,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   before_action :set_admin_article, only: [:show, :edit, :update, :destroy]
 
   def index
-   # @articles = Article.where(:publish => :true)
     @articles = Article.where(:section_id => params[:cat])
-    #@section = Section.find(params[:cat])
-
   end
 
   def show
@@ -47,7 +44,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    redirect_to admin_articles_url(:cat => @articles.section_id), notice: 'Artikkelen ble slettet!'
+    redirect_to admin_articles_url(:cat => @article.section_id), notice: 'Artikkelen ble slettet!'
   end
 
   private
