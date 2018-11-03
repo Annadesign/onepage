@@ -44,7 +44,7 @@ class Admin::ServicesController < Admin::ApplicationController
   def destroy
     @service.destroy
     respond_to do |format|
-      format.html { redirect_to admin_sevices_url(:cat => @service.section_id), notice: 'Tjenesten ble slettet.' }
+      format.html { redirect_to admin_services_url(:cat => @service.section_id), notice: 'Tjenesten ble slettet.' }
       format.json { head :no_content }
     end
   end
