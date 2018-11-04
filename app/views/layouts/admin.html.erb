@@ -58,6 +58,11 @@
                         <i class="fa fa-align-justify"></i> Prosjekter
                     <% end %>
                 </li>  
+                <li class="<%= is_active_controller('admin/faqs') %>">
+                    <%= link_to admin_faqs_path(:cat => '7') do %>
+                        <i class="fa fa-align-justify"></i> Spørsmål og svar
+                    <% end %>
+                </li>  
                 <li class="<%= is_active_controller('admin/partners') %>">
                     <%= link_to admin_partners_path(:cat => '5') do %>
                         <i class="fa fa-align-justify"></i> Samarbeidspartnere

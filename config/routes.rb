@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 		resources :projects, only: [:index, :new, :create, :edit, :update, :destroy]
 		resources :partners, only: [:index, :new, :create, :edit, :update, :destroy]
 		resources :contacts, only: [:index, :new, :create, :edit, :update, :destroy]
-
+    resources :faqs, only: [:index, :new, :create, :edit, :update, :destroy]
     	resources :sections do
       		collection do
         		patch :reorder

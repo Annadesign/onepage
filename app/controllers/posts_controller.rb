@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 		@articles 	= Article.published
 		@partners	= Partner.published
 		@contacts 	= Contact.published
+		@faqs		= Faq.all
 	end
 
 end

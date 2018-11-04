@@ -35,19 +35,18 @@
         <div class="panel-heading">
           <%= f.submit 'Lagre', :class => "btn btn-primary btn-block" %>
         </div>
-      <div class="panel-body">
-        <div class="checkbox checkbox-primary">
-          <%= f.check_box :ispublished, :class => "" %>
-          <%= f.label :ispublished, 'Publisere' %>
+        <div class="panel-body">
+          <div class="checkbox checkbox-primary">
+            <%= f.check_box :ispublished, :class => "" %>
+            <%= f.label :ispublished, 'Publisere' %>
+          </div>
         </div>
-      </div>
-
-      <div class="panel-footer">
-        <span class="text-muted small">
-          Opprettet: <%= @project.created_at.to_s(:long) if @project.created_at? %><br>
-          Sist oppdatert: <%= @project.updated_at.to_s(:long) if @project.updated_at? %>
-        </span> 
-      </div>
+        <div class="panel-footer">
+          <span class="text-muted small">
+            Opprettet: <%= @project.created_at.to_s(:long) if @project.created_at? %><br>
+            Sist oppdatert: <%= @project.updated_at.to_s(:long) if @project.updated_at? %>
+          </span> 
+        </div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">
