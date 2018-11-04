@@ -150,8 +150,17 @@
     <!-- Energikonferansen -->
 
     <!-- Spørsmål og svar -->
-    <section class="classy-faq-area section_padding_100" id="faq">
+    <% if @faqs.present? %>
+    <section class="about_area landing_one_version section_padding_100_70" id="faq">
         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading">
+                        <h3><%= @sections[6].title %></h3>
+                        <p><%= @sections[6].description %></p>
+                    </div>
+                </div>
+            </div>            
             <div class="row">
                 <div class="col-md-12">
                     <div class="faq_area">
@@ -176,6 +185,7 @@
             </div>
         </div>
     </section>
+    <% end %>
 
     <!-- /Spørsmål og svar -->
 
