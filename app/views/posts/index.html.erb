@@ -36,7 +36,7 @@
                             </div>
                             <div class="single_speciality_text">
                                 <h5><%= service.title %></h5>
-                                <p><%= service.description %></p>
+                                <p><%= service.description.html_safe %></p>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                     <div class="col-12">
                         <div class="about_text">
                             <h3><%= @sections[3].title %></h3>
-                            <p><%= @sections[3].description %></p>
+                            <p><%= @sections[3].description.html_safe %></p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="col-12">
                     <div class="section_heading">
                         <h3><%= @sections[6].title %></h3>
-                        <p><%= @sections[6].description %></p>
+                        <p><%= @sections[6].description.html_safe %></p>
                     </div>
                 </div>
             </div>            
@@ -160,7 +160,7 @@
                 <div class="col-12">
                     <div class="section_heading">
                         <h3><%= @sections[4].title %></h3>
-                        <p><%= @sections[4].description %></p>
+                        <p><%= @sections[4].description.html_safe %></p>
                     </div>
                 </div>
             </div>
