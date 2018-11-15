@@ -23,10 +23,8 @@ class Admin::ProjectsController < Admin::ApplicationController
     respond_to do |format|
       if @project.save
         format.html { redirect_to admin_projects_url(:cat => @project.section_id), notice: 'Prosjektet er lagt til.' }
-        format.json { render :show, status: :created, location: @project }
       else
-        format.html { render :new }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
+        format.html { render :new}
       end
     end
   end
