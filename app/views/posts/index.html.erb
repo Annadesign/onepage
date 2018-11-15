@@ -84,7 +84,7 @@
     <!-- Prosjekt modal -->
 
     <!-- Prosjekter -->
-    <section class="about_area landing_one_version section_padding_100_70" id="projects">
+     <section class="about_area landing_one_version section_padding_100_70" id="projects">
         <div class="container">
             <div class="our_speciality_area">
                 <div class="row">
@@ -100,11 +100,14 @@
                 	<% @projects.each do |project| %>
                     <div class="col-12 col-sm-6 col-md-3">
                         <div class="single_speciality item">
+                            <div class="single_speciality_icon">
+                                <i class="fa fa-<%= project.service.icon %>" aria-hidden="true"></i>
+                            </div>                            
                             <div class="single_project_text">
                                 <h5><%= project.title %></h5>
                                 <p><%= project.summary %></p>
+                                <p><a class="btn btn-outline btn-pill btn-sm btn-mat-blue" data-target="#project-modal-<%= project.id %>" data-toggle="modal" href="#">Les mer</a></p>
                             </div>
-                            <a class="btn btn-outline btn-pill btn-sm btn-mat-blue" data-target="#project-modal-<%= project.id %>" data-toggle="modal" href="#">Les mer</a>
                         </div>
                     </div>
                     <% end %>

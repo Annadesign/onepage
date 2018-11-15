@@ -48,6 +48,10 @@
           </span> 
         </div>
       </div>
+    <div class="form-group">
+      <%= f.label :service_id, 'Tjeneste', :class => "" %>
+      <%= f.select :service_id, Service.all.collect {|c| [c.title, c.id]}, {prompt: 'Velg tjeneste'}, :class => "form-control" %>
+    </div>        
       <div class="panel panel-default">
         <div class="panel-heading">
           Hovedbilde

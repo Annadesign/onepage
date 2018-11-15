@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181104223759) do
+ActiveRecord::Schema.define(version: 20181115204834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,7 +92,9 @@ ActiveRecord::Schema.define(version: 20181104223759) do
     t.bigint "section_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "service_id"
     t.index ["section_id"], name: "index_projects_on_section_id"
+    t.index ["service_id"], name: "index_projects_on_service_id"
   end
 
   create_table "sections", force: :cascade do |t|
@@ -120,5 +122,6 @@ ActiveRecord::Schema.define(version: 20181104223759) do
   add_foreign_key "homes", "sections"
   add_foreign_key "partners", "sections"
   add_foreign_key "projects", "sections"
+  add_foreign_key "projects", "services"
   add_foreign_key "services", "sections"
 end
