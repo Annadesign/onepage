@@ -6,7 +6,7 @@
             <!-- Welcome Text  -->
             <div class="landing_hero_text text-center">
               <h2 class="fonts-shadow-into-light"><%= @sections[0].title %></h2>
-              <p style="margin-top: 15px;"><%= @sections[0].description %></p> 
+              <p style="margin-top: 15px;"><%= @sections[0].description.html_safe %></p> 
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@
                     <div class="col-12">
                         <div class="about_text">
                             <h3><%= @sections[1].title %></h3>
-                            <p><%= @sections[1].description %></p>
+                            <p><%= @sections[1].description.html_safe %></p>
                         </div>
                     </div>
                 </div>
