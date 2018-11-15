@@ -112,43 +112,6 @@
     </section>
     <!-- Prosjekter -->
 
-    <!-- Samarbeidspartnere -->
-    <section class="landing_why_choose_us landing_one_version section_padding_100_50" id="partners">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section_heading">
-                        <h3><%= @sections[4].title %></h3>
-                        <p><%= @sections[4].description %></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <% @partners.each do |partner| %>
-                <div class="col-12 col-sm-6 col-md-6">
-                    <div class="single_why_choose_us text-center">
-                        <%= image_tag(partner.logo, :class => "", :alt => "", :style => 'width:250px;') if partner.logo? %>
-                        <p><%= partner.description %></p>
-                        <a href="<%= partner.link %>" target="_blank" class="btn btn-outline btn-pill btn-sm btn-mat-blue"><%= partner.title %> sine nettsider</a>
-                    </div>
-                </div>
-                <% end %>
-            </div>
-        </div>
-    </section>
-    <!-- Samarbeidspartnere -->
-
-    <!-- Video Energikonferansen -->
-     <div class="video_area landing_one_version section_padding_100 background-overlay jarallax" style="background-image: url(<%= asset_path 'energi-sparing.jpg' %>);">
-        <div class="video_play_area text-center">
-            <h3>De viktige valgene: Åpningsfilm Enovakonferansen 2018</h3>
-            <!-- Video Link -->
-            <a href="https://www.youtube.com/watch?v=lugFnjXmGNA" class="video_btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-            <p>Se denne videoen på 2 minutter</p>
-        </div>
-    </div>
-    <!-- Energikonferansen -->
-
     <!-- Spørsmål og svar -->
     <% if @faqs.present? %>
     <section class="about_area landing_one_version section_padding_100_70" id="faq">
@@ -186,8 +149,44 @@
         </div>
     </section>
     <% end %>
+    <!-- /Spørsmål og svar -->    
 
-    <!-- /Spørsmål og svar -->
+    <!-- Samarbeidspartnere -->
+    <section class="landing_why_choose_us landing_one_version section_padding_100_50" id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading">
+                        <h3><%= @sections[4].title %></h3>
+                        <p><%= @sections[4].description %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <% @partners.each do |partner| %>
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="single_why_choose_us text-center">
+                        <%= image_tag(partner.logo, :class => "", :alt => "", :style => 'width:250px;') if partner.logo? %>
+                        <p><%= partner.description %></p>
+                        <a href="<%= partner.link %>" target="_blank" class="btn btn-outline btn-pill btn-sm btn-mat-blue"><%= partner.title %> sine nettsider</a>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </section>
+    <!-- Samarbeidspartnere -->
+
+    <!-- Video Energikonferansen -->
+     <div class="video_area landing_one_version section_padding_100 background-overlay jarallax" style="background-image: url(<%= asset_path 'energi-sparing.jpg' %>);">
+        <div class="video_play_area text-center">
+            <h3>De viktige valgene: Åpningsfilm Enovakonferansen 2018</h3>
+            <!-- Video Link -->
+            <a href="https://www.youtube.com/watch?v=lugFnjXmGNA" class="video_btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+            <p>Se denne videoen på 2 minutter</p>
+        </div>
+    </div>
+    <!-- Energikonferansen -->
 
     <!-- Kontakt -->
     <section class="message_now_area landing_one_version section_padding_100_70" id="contact">
