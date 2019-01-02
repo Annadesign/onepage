@@ -216,7 +216,7 @@
                     		<div class="col-md-8">
                     			<h4><%= contact.name %></h4>
                     			<p><i class="fa fa-phone"></i> <%= contact.telephone %></p>
-                    			<p><i class="fa fa-envelope"></i> <%= contact.email %></p>
+                    			<p><a href="mailto:<%= contact.email %>" style="color:#555;"><i class="fa fa-envelope"></i></a> <%= contact.email %></p>
                     			<p><%= contact.description.html_safe %></p>
                     		</div>
                     	</div>
